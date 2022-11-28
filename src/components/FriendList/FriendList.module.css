@@ -1,0 +1,23 @@
+.status {
+  /* position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 4%; */
+  padding: 15px;
+  background: red;
+  border-radius: 50%;
+}
+
+.isOnline {
+  /* composes: status; */
+  background-color: green;
+}
+
+.isOffline {
+  /* composes: status; */
+  background-color: red;
+}
+
+.name {
+  color: red;
+}
