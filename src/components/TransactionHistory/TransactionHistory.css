@@ -1,0 +1,21 @@
+.transactions {
+  width: 500px;
+}
+.transaction-history {
+  width: 100%;
+  text-align: center;
+}
+
+thead {
+  background-color: #01bdd5;
+  color: white;
+  padding-top: 10px;
+}
+
+tr {
+  width: 10px;
+}
+
+th {
+  width: 33.3%;
+}

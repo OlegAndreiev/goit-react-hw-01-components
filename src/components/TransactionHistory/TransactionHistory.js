@@ -1,10 +1,10 @@
 // import transactions from '../../transactions.json';
 import PropTypes from 'prop-types';
-// import css from './FriendList.module.css';
+import './TransactionHistory.css';
 export const TransactionHistory = props => {
   //   console.dir(props);
   return (
-    <section className="friends-list">
+    <section className="transactions">
       <table className="transaction-history">
         <thead className="table">
           <tr>

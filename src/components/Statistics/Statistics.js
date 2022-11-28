@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-// import data from '../../data.json';
+import './Statistics.css';
 export const Statistics = props => {
   console.log(props.title);
   if (props.title === undefined) {
@@ -7,16 +7,16 @@ export const Statistics = props => {
   }
   return (
     <section className="statistics">
-      <h2 className="title">{props.title}</h2>
+      <h2 className="title">{props.title.toUpperCase()}</h2>
       <ul className="stat-list">
         {props.stats.map(el => (
           <li
-            className="item-statistics"
+            className="item"
             style={{ backgroundColor: getRandomHexColor() }}
             key={el.id}
           >
-            <span className="label">{el.label}</span>
-            <span className="percentage">{el.percentage}%</span>
+            <span className="item-label">{el.label}</span>
+            <span className="item-percentage">{el.percentage}%</span>
           </li>
         ))}
       </ul>
