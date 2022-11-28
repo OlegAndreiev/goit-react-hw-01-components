@@ -1,17 +1,19 @@
-// import PropTypes from 'prop-types';
-
-// import friends from '../../friends.json';
 import css from './FriendList.module.css';
 export const FriendsList = props => {
   return (
     <section className={css.friendsList}>
-      <ul key="FrendList" className={css.friendList}>
+      <ul key="FriendList" className={css.friendList}>
         {props.friends.map(el => (
           <li className={css.friendListItem} key={el.id}>
-            {/* <span className={el.isOnline ? 'isOnline' : 'isOffline'}></span> */}
             <span
-              className={css.status}
-              style={{ backgroundColor: 'red' }}
+              className="status"
+              style={{
+                backgroundColor: el.isOnline ? 'red' : 'green',
+                width: '15px',
+                height: '15px',
+                borderRadius: '50%',
+                marginLeft: '10px',
+              }}
             ></span>
             <img
               className="friend-list-avatar"
@@ -20,7 +22,6 @@ export const FriendsList = props => {
               width="48"
             />
             <p className={css.name}>{el.name}</p>
-            {/* isOnline={el.isOnline} */}
           </li>
         ))}
       </ul>

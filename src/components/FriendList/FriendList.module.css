@@ -1,21 +1,3 @@
-.status {
-  /* padding: 10px; */
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin-left: 10px;
-}
-
-.isOnline {
-  /* composes: status; */
-  background-color: green;
-}
-
-.isOffline {
-  /* composes: status; */
-  background-color: red;
-}
-
 .name {
   color: black;
   font-size: x-large;
