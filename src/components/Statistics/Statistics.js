@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 // import data from '../../data.json';
 export const Statistics = props => {
+  console.log(props.title);
+  if (props.title === undefined) {
+    return;
+  }
   return (
     <section className="statistics">
       <h2 className="title">{props.title}</h2>

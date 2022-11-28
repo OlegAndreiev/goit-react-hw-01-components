@@ -6,10 +6,11 @@ import user from '../user.json';
 import data from '../data.json';
 import friends from '../friends.json';
 import transactions from '../transactions.json';
+import './App.css';
 
 export const App = () => {
   return (
-    <div>
+    <div className="container">
       <Profile profile={user} />
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
