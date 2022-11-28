@@ -1,11 +1,9 @@
 .status {
-  /* position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  left: 4%; */
-  padding: 15px;
-  background: red;
+  /* padding: 10px; */
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
+  margin-left: 10px;
 }
 
 .isOnline {
@@ -19,5 +17,30 @@
 }
 
 .name {
-  color: red;
+  color: black;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.friendsList {
+  margin-bottom: 50px;
+}
+
+.friendListItem {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 300px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+}
+
+.friendListItem:not(:last-child) {
+  margin-bottom: 10px;
+}
+.friend-list-avatar {
+  border-radius: 5px;
 }

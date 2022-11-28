@@ -4,21 +4,23 @@
 import css from './FriendList.module.css';
 export const FriendsList = props => {
   return (
-    <section className="friends-list">
-      <ul key="FrendList" className="friend-list">
+    <section className={css.friendsList}>
+      <ul key="FrendList" className={css.friendList}>
         {props.friends.map(el => (
-          <li key={el.id}>
-            <span className={el.isOnline ? 'isOnline' : 'isOffline'}>
-              sdasd
-            </span>
+          <li className={css.friendListItem} key={el.id}>
+            {/* <span className={el.isOnline ? 'isOnline' : 'isOffline'}></span> */}
+            <span
+              className={css.status}
+              style={{ backgroundColor: 'red' }}
+            ></span>
             <img
-              className="avatar"
+              className="friend-list-avatar"
               src={el.avatar}
               alt="User avatar"
               width="48"
             />
             <p className={css.name}>{el.name}</p>
-            isOnline={el.isOnline}
+            {/* isOnline={el.isOnline} */}
           </li>
         ))}
       </ul>
