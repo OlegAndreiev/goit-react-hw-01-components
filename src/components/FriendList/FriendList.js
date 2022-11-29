@@ -1,30 +1,18 @@
+import PropTypes from 'prop-types';
 import css from './FriendList.module.css';
-export const FriendsList = props => {
+import { FriendListItem } from './FriendListItem';
+export const FriendList = ({ friends }) => {
   return (
     <section className={css.friendsList}>
       <ul key="FriendList" className={css.friendList}>
-        {props.friends.map(el => (
-          <li className={css.friendListItem} key={el.id}>
-            <span
-              className="status"
-              style={{
-                backgroundColor: el.isOnline ? 'red' : 'green',
-                width: '15px',
-                height: '15px',
-                borderRadius: '50%',
-                marginLeft: '10px',
-              }}
-            ></span>
-            <img
-              className="friend-list-avatar"
-              src={el.avatar}
-              alt="User avatar"
-              width="48"
-            />
-            <p className={css.name}>{el.name}</p>
-          </li>
+        {friends.map(el => (
+          <FriendListItem key={el.id} friends={el} />
         ))}
       </ul>
     </section>
   );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.array.isRequired,
 };

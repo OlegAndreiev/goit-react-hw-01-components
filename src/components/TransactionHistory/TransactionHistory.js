@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import './TransactionHistory.css';
-export const TransactionHistory = props => {
+export const TransactionHistory = ({ items }) => {
   return (
     <section className="transactions">
       <table className="transaction-history">
@@ -13,7 +13,7 @@ export const TransactionHistory = props => {
         </thead>
 
         <tbody>
-          {props.items.map(el => (
+          {items.map(el => (
             <tr key={el.id}>
               <td>{el.type.charAt(0).toUpperCase() + el.type.slice(1)}</td>
               <td>{el.amount}</td>
