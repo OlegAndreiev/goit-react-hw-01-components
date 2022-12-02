@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types';
 import './Statistics.css';
 export const Statistics = ({ title, stats }) => {
-  if (title === undefined) {
-    return;
-  }
   return (
     <section className="statistics">
-      <h2 className="title">{title.toUpperCase()}</h2>
+      <h2 className="title">{title && title.toUpperCase()}</h2>
       <ul className="stat-list">
         {stats.map(el => (
           <li
